@@ -1,51 +1,192 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workshop CSS básico<title>
-</head>
-<body>
-    <header>
-       <h1>Workshop CSS básico</h1> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site do Batman</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
 
-       <nav>
-        <ul>
-            <li><a href="#">Inicio</a></li>
+      body {
+        margin: 0;
+        background-color: rgb(0, 0, 0);
+        color: blanchedalmond;
+        font-family: system-ui, Arial, Helvetica, sans-serif;
+        line-height: 1.5;
+      }
+
+      .container {
+        width: 900px;
+        margin: 0 auto;
+        padding: 10px;
+      }
+
+      .box {
+        background: rgba(139, 0, 0, 0.75);
+        border: 3px solid rgba(65, 1, 1, 0.75);
+        border-radius: 12px;
+        padding: 14px;
+        margin-bottom: 12px;
+      }
+
+      h1,
+      h2 {
+        color: #f3b225;
+        margin: 0 0 8px;
+      }
+
+      .subtitulo {
+        margin: 0;
+        color: #d1d5db;
+      }
+
+      p {
+        margin: 0;
+        color: #d1d5db;
+      }
+
+      #apresentacao {
+        border-left: 8px solid #f3b225;
+      }
+
+      .nav {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 10px;
+        flex-wrap: nowrap;
+      }
+
+      .nav-link {
+        display: inline-block;
+        color: #f3b225;
+        background: rgb(0, 0, 0);
+        padding: 8px 10px;
+        border-radius: 10px;
+        font-weight: 700;
+      }
+
+      .nav-link:hover {
+        background: rgb(138, 1, 1);
+      }
+
+      .gallery {
+        width: 920px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: nowrap;
+        justify-content: center;
+      }
+
+      .bat-img {
+        width: 220px;
+        height: 120px;
+        border: 2px solid aliceblue;
+        border-radius: 10px;
+      }
+
+      footer p {
+        color: #d1d5db;
+        margin: 6px 0 0;
+      }
+
+      .link {
+        color: #f3b225;
+      }
+
+      .link:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body id="topo">
+    <div class="container" id="pagina">
+      <header class="box" id="cabeçalho">
+        <div class="header-interno">
+          <h1 class="titulo">SITE DO BATMAN</h1>
+          <p class="subtitulo">
+            Gotham City: <strong>vigilância</strong>, <em>estrategia</em> e
+            tecnologia.
+          </p>
+        </div>
+      </header>
+      <nav class="box" id="menu">
+        <ul class="nav">
+          <li><a class="nav-link" href="#apresentacao">Quem é?</a></li>
+          <li><a class="nav-link" href="#galeria">Galeria</a></li>
+          <li><a class="nav-link" href="#rodape">Rodapé</a></li>
         </ul>
-       </nav>
-    </header>
+      </nav>
+      <main id="conteudo">
+        <section class="box" id="apresentacao">
+          <h2>Quem é o Batman?</h2>
 
-    <main>
-        <section>
-            <h2>Introdução</h2>
+          <p>
+            O Batman é um super-herói criado pela DC Comics, que apareceu pela
+            primeira vez em 1939. Sua identidade secreta é Bruce Wayne, um
+            bilionário que, quando criança, presenciou o assassinato de seus
+            pais na cidade de Gotham. Esse trauma marcou profundamente sua vida
+            e o motivou a dedicar sua existência ao combate ao crime.
+          </p>
+          <br />
 
-            <p>Este é um exempll de página estruturada com <strong>HTML semântico</strong> para aplicar estilos com CSS. Voê tambem pode usar <em>ênfase(Texto em Itálico)</em> no texto</p>
+          <p>
+            Diferente de muitos heróis, Batman não possui superpoderes. Ele
+            utiliza inteligência, treinamento físico intenso, habilidades de
+            detetive, tecnologia avançada e seus recursos financeiros para
+            enfrentar criminosos. Essa característica o torna mais humano e
+            aproxima suas histórias da realidade social.
+          </p>
+          <br />
+
+          <p>
+            Em várias histórias, Gotham representa problemas sociais como
+            desigualdade, corrupção e violência urbana. Alguns quadrinhos usam o
+            Batman como forma de <strong>crítica social</strong>, mostrando como
+            falhas nas instituições, interesses econômicos e autoritarismo
+            afetam principalmente quem tem menos direitos e oportunidades.
+          </p>
+          <br />
+
+          <p>
+            Além disso, muitas narrativas questionam se a atuação de Batman como
+            vigilante é realmente uma solução ou apenas um reflexo de um sistema
+            falho. Assim, o personagem também levanta debates sobre justiça,
+            moralidade e os limites do poder individual.
+          </p>
         </section>
 
-        <section>
-                <h2>Lista de tópicos</h2>
-
-                <ul>
-                    <li>Estrutura básica</li>
-                    <li>Navegação</li>
-                    <li>Imagens</li>
-                    <li>Tabelas</li>
-                </ul>
+        <section class="box" id="galeria">
+          <h2>Galeria</h2>
+          <div class="gallery" id="galeria-imagens">
+            <img
+              class="bat-img"
+              src="2023101721205459_2.jpg"
+              alt="batman planando"
+            />
+            <img
+              class="bat-img"
+              src="Arkham-Knight2.jpg"
+              alt="batman na chuva"
+            />
+            <img
+              class="bat-img"
+              src="imagemBatman1.jpg"
+              alt="baman farmando aura"
+            />
+          </div>
         </section>
+      </main>
 
-        <section>
-            <h2>Imagem</h2>
-            <img src="http://picsum.photos/800/400" alt="Imagem de exemplo">
-        </section>
-
-        <section>
-            
-        </section>
-
-    </main>
-    <footer>
-
-    </footer>
-</body>
+      <footer class="box" id="rodape">
+        <p>
+          <a class="link" href="#topo">Topo</a>
+        </p>
+        <p>Exemplo de website para treino de HTML e CSS. Mateus Borba Ramos</p>
+      </footer>
+    </div>
+  </body>
 </html>
